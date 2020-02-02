@@ -55,3 +55,7 @@ refer to http://docs.nativescript.org/ui/theme.
     color: blue;
 }
 
+.fa {
+    font-family: FontAwesome, fontawesome-webfont;
+}
+
