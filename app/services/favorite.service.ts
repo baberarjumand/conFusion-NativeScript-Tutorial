@@ -29,14 +29,14 @@ export class FavoriteService {
             .pipe(map(dishes => dishes.filter(dish => this.favorites.some(el => el === dish.id.toString()))));
     }
 
-    deleteFavorite(id: string): Observable<Dish[]> {
-        let index = this.favorites.indexOf(id);
-        if (index >= 0) {
-            this.favorites.splice(index,1);
-            return this.getFavorites();
-        }
-        else {
-            return throwError('Deleting non-existant favorite');
-        }
+    deleteFavorite(id: number): Observable<Dish[]> { 
+        let index = this.favorites.indexOf(id.toString()); 
+        if (index >= 0) { 
+            this.favorites.splice(index,1); 
+            return this.getFavorites(); 
+        } 
+        else { 
+            return Observable.throw('Deleting non-existant favorite'); 
+        } 
     }
 }

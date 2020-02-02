@@ -29,7 +29,7 @@ export class DishdetailComponent implements OnInit {
     private routerExtensions: RouterExtensions,
     private favoriteservice: FavoriteService,
     private fonticon: TNSFontIconService,
-    @Inject('baseURL') private baseURL) { }
+    @Inject('baseURL') public baseURL) { }
 
   ngOnInit() {
 
