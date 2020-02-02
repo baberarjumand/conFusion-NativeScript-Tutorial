@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NativeScriptHttpModule } from "nativescript-angular/http";
 
 import { MenuComponent } from './menu/menu.component';
+import { DishdetailComponent } from './dishdetail/dishdetail.component';
 
 import { DishService } from './services/dish.service';
 import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
@@ -37,7 +38,8 @@ import { baseURL } from './shared/baseurl';
         AppComponent,
         // ItemsComponent,
         // ItemDetailComponent
-        MenuComponent
+        MenuComponent,
+        DishdetailComponent
     ],
     providers: [
         // ItemService
