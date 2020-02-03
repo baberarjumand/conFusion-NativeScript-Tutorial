@@ -55,9 +55,15 @@ export class DishdetailComponent implements OnInit {
     if (!this.favorite) {
       console.log('Adding to Favorites', this.dish.id);
       this.favorite = this.favoriteservice.addFavorite(this.dish.id.toString());
-      const toast = new Toasty({
-        text: "Added Dish "+ this.dish.id
-      });
+
+      // for nativescript toasty 3.0.0^
+      // const toast = new Toasty({
+      //   text: "Added Dish "+ this.dish.id
+      // });
+
+      // for nativescript 1.1.5, version used in this course
+      const toast = new Toasty("Added Dish "+ this.dish.id, "short", "bottom");
+      
       toast.show();
     }
   }
