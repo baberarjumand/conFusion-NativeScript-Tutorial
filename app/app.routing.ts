@@ -11,6 +11,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from "./about/about.component";
 import { FavoritesComponent } from './favorites/favorites.component';
 import { ReservationComponent } from './reservation/reservation.component';
+import { UserAuthComponent } from "./userauth/userauth.component";
 
 const routes: Routes = [
     // { path: "", redirectTo: "/items", pathMatch: "full" },
@@ -23,7 +24,8 @@ const routes: Routes = [
     { path: "contact", component: ContactComponent },
     { path: "about", component: AboutComponent },
     { path: "favorites", component: FavoritesComponent },
-    { path: "reservation", component: ReservationComponent }
+    { path: "reservation", component: ReservationComponent },
+    { path: "auth", component: UserAuthComponent }
 ];
 
 @NgModule({
