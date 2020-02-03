@@ -1,6 +1,8 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { LeaderService } from '~/services/leader.service';
 import { Leader } from '~/shared/leader';
+import * as app from "application";
+import { RadSideDrawer } from "nativescript-ui-sidedrawer";
 
 @Component({
     selector: 'app-about',
@@ -21,6 +23,11 @@ import { Leader } from '~/shared/leader';
       this.leaderService.getLeaders()
         .subscribe(leaders => this.leaders = leaders,
           errmess => this.errMess = <any>errmess);
+    }
+
+    onDrawerButtonTap(): void {
+      const sideDrawer = <RadSideDrawer>app.getRootView();
+      sideDrawer.showDrawer();
     }
 
   }
