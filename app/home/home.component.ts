@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
     private leaderservice: LeaderService,
     private page: Page,
     private fonticon: TNSFontIconService,
-    @Inject('baseURL') private baseURL) { }
+    @Inject('baseURL') public baseURL) { }
 
   ngOnInit() {
     this.dishservice.getFeaturedDish()
